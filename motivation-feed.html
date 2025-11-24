@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Motivation Feed</title>
+
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+
+<style>
+  body { font-family: 'Poppins', sans-serif; }
+  .material-symbols-outlined {
+    font-variation-settings: 'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24;
+  }
+</style>
+
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        primary: "#08304E",
+        accent: "#FEF0AD",
+        softyellow: "#FEF0AD",
+        lightblue: "#A0D2EB",
+      }
+    }
+  }
+}
+</script>
+
+</head>
+
+<body class="bg-[#F8F9FA]">
+
+<!-- ⭐ Phone-width wrapper -->
+<div class="w-full flex justify-center bg-[#F8F9FA]">
+<div class="w-full max-w-[420px] bg-[#F8F9FA] min-h-screen relative pb-24 overflow-x-hidden">
+
+<!-- Header -->
+<header class="flex items-center justify-between p-4 sticky top-0 bg-[#F8F9FA] z-10">
+    <!-- Back button -->
+    <a href="dashboard.html" class="flex size-12 items-center justify-center text-primary">
+        <span class="material-symbols-outlined text-3xl">arrow_back_ios</span>
+    </a>
+
+    <h1 class="text-primary text-lg font-bold leading-tight">Stay Inspired, Alex!</h1>
+
+    <!-- Right icon -->
+    <button class="flex size-12 items-center justify-center text-primary">
+        <span class="material-symbols-outlined text-2xl">notifications</span>
+    </button>
+</header>
+
+<main class="pb-24">
+
+    <!-- Quote card -->
+    <div class="px-4 py-4">
+      <div class="relative flex flex-col items-center justify-center rounded-2xl bg-primary p-6 text-center shadow-lg overflow-hidden">
+        <span class="material-symbols-outlined absolute -top-2 -left-2 text-8xl text-accent/10 -rotate-12">format_quote</span>
+
+        <p class="relative text-accent text-2xl font-bold leading-relaxed z-10">
+          "The only way to do great work is to love what you do."
+        </p>
+        <p class="relative mt-3 text-lightblue/80 text-base font-medium z-10">— Steve Jobs</p>
+
+        <span class="material-symbols-outlined absolute -bottom-4 -right-2 text-8xl text-accent/10 rotate-[168deg]">format_quote</span>
+      </div>
+    </div>
+
+    <!-- Filter pills -->
+    <div class="flex gap-3 px-4 py-2 overflow-x-auto whitespace-nowrap">
+      <div class="flex h-8 shrink-0 items-center rounded-full bg-primary/10 px-4">
+        <p class="text-primary text-sm font-medium">All</p>
+      </div>
+      <div class="flex h-8 shrink-0 items-center rounded-full bg-white px-4 shadow">
+        <p class="text-primary text-sm font-medium">Quotes</p>
+      </div>
+      <div class="flex h-8 shrink-0 items-center rounded-full bg-white px-4 shadow">
+        <p class="text-primary text-sm font-medium">Success Stories</p>
+      </div>
+      <div class="flex h-8 shrink-0 items-center rounded-full bg-white px-4 shadow">
+        <p class="text-primary text-sm font-medium">Pro Tips</p>
+      </div>
+    </div>
+
+    <!-- Card 1 -->
+    <div class="p-4">
+      <div class="rounded-xl shadow-md overflow-hidden bg-cover bg-center pt-[132px]"
+        style='background-image: linear-gradient(0deg, rgba(0,0,0,.4), rgba(0,0,0,0)), url("https://lh3.googleusercontent.com/aida-public/AB6AXuDq-3YXH5z7rosfXO7yloEQkCTR_jtIeVsml_mcLkoq2KnNfJe2grNZx_pQthb7zbl8WIbgfPVP8KV0iZR1asVUOFTge0MSWTfw7KHFCPsB8aF42oaWmU3S_j8NlN0BLKBCW1SAIf1caxOgEz5-XM5j_qUIMUnMjvjUoN8ea940HKaPp-SJjb3eLD5RPXmPiWlo7rI2Prjzk2h3DJ077p0vpmSqUOQCxA6oufSQOBVsl_ZPWwPR5c_hdmzPg87bZ-gh2nZ_KDWRb1fi");'>
+        <div class="p-4 flex justify-between">
+          <div class="flex-1 flex flex-col gap-1">
+            <p class="text-white text-2xl font-bold leading-tight">
+              "The secret of getting ahead is getting started."
+            </p>
+            <p class="text-gray-200 text-base font-medium">Mark Twain</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex gap-4 px-2 -mt-4">
+        <div class="flex items-center gap-1 bg-white px-3 py-1.5 rounded-full shadow">
+          <span class="material-symbols-outlined text-lightblue text-xl">favorite</span>
+          <p class="text-primary text-[13px] font-semibold">1.2k</p>
+        </div>
+        <div class="flex items-center gap-1 bg-white px-3 py-1.5 rounded-full shadow">
+          <span class="material-symbols-outlined text-lightblue text-xl">share</span>
+          <p class="text-primary text-[13px] font-semibold">256</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="px-4 pb-4">
+      <div class="bg-white rounded-xl shadow-md overflow-hidden">
+        <div class="aspect-video bg-cover bg-center"
+        style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB2Gu24a4_Utmy2lPnVK2ijUuHlC-06xlU2Fu9hp4RLSgIylxag52es1pUz5ZX8UGbG-jnCd_WxUl39WwrXwMf78PIhO5PyeOQvrpRDGGoCJslj62QwkTZJD90-vrSnpT1nUaJMCiyFYLeOwEACtsgOeKzfb22ShJDowc0FmMbVon7hABET2dODuUiRcA-FE_bgmOd58SeJ2DgYpaRHsl7mwjD3jLbFqhcesHa3Y-axAIT5NC7fuDDNiMgzrMx3CUdns2l2DckNH_3O");'>
+        </div>
+
+        <div class="p-4">
+          <div class="inline-block rounded-full bg-lightblue/30 px-3 py-1">
+            <p class="text-primary text-xs font-semibold uppercase">Success Story</p>
+          </div>
+
+          <p class="text-primary text-lg font-bold mt-2">Ran my first 5k marathon!</p>
+
+          <p class="text-primary/80 text-base">
+            After 3 months of consistent training, I finally did it. This app kept me motivated every day.
+          </p>
+
+          <p class="text-primary/60 text-sm font-medium pt-1">Jane Doe</p>
+        </div>
+
+        <div class="flex gap-6 px-4 py-2 border-t border-gray-200">
+          <div class="flex items-center gap-2">
+            <span class="material-symbols-outlined text-lightblue text-2xl">favorite</span>
+            <p class="text-primary text-[13px] font-semibold">874</p>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="material-symbols-outlined text-lightblue text-2xl">share</span>
+            <p class="text-primary text-[13px] font-semibold">109</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="px-4 pb-20">
+      <div class="bg-white rounded-xl shadow-md">
+        <div class="p-4">
+          <div class="inline-block rounded-full bg-lightblue/30 px-3 py-1">
+            <p class="text-primary text-xs font-semibold uppercase">Pro Tip</p>
+          </div>
+
+          <p class="text-primary text-lg font-bold mt-2">The 2-Minute Rule</p>
+
+          <p class="text-primary/80 text-base">
+            Beat procrastination by shrinking habits: “Read 1 page,” “Wear running shoes,” etc.
+          </p>
+        </div>
+
+        <div class="flex gap-6 px-4 py-2 border-t border-gray-200">
+          <div class="flex items-center gap-2">
+            <span class="material-symbols-outlined text-lightblue text-2xl">favorite</span>
+            <p class="text-primary text-[13px] font-semibold">2.1k</p>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="material-symbols-outlined text-lightblue text-2xl">share</span>
+            <p class="text-primary text-[13px] font-semibold">412</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+</main>
+
+<!-- ⭐ Unified Dashboard Navigation -->
+<div class="fixed bottom-0 left-0 right-0 h-20 bg-primary shadow-lg rounded-t-xl px-4 flex items-center justify-around z-20 max-w-[420px] mx-auto">
+
+  <a href="dashboard.html" class="flex flex-col items-center text-accent/70">
+    <span class="material-symbols-outlined text-2xl">home</span>
+    <span class="text-xs font-medium">Home</span>
+  </a>
+
+  <a href="reflection.html" class="flex flex-col items-center text-accent/70">
+    <span class="material-symbols-outlined text-2xl">calendar_today</span>
+    <span class="text-xs font-medium">Journal</span>
+  </a>
+
+  <a href="add-habit.html" class="relative -translate-y-4 flex size-16 items-center justify-center rounded-full bg-accent text-primary shadow-lg">
+    <span class="material-symbols-outlined text-4xl">add</span>
+  </a>
+
+  <a href="settings.html" class="flex flex-col items-center text-accent/70">
+    <span class="material-symbols-outlined text-2xl">settings</span>
+    <span class="text-xs font-medium">Settings</span>
+  </a>
+
+  <a href="profile.html" class="flex flex-col items-center text-accent/70">
+    <span class="material-symbols-outlined text-2xl">person</span>
+    <span class="text-xs font-medium">Profile</span>
+  </a>
+
+</div>
+
+</div>
+</div>
+
+</body>
+</html>

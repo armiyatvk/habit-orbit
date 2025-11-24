@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Habit Tracker Calendar</title>
+
+<!-- Tailwind -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+
+<style>
+  body { font-family: 'Poppins', sans-serif; }
+</style>
+
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        primary: "#08304E",
+        secondary: "#87CEEB",
+        accent: "#FEF0AD",
+        "neutral-light": "#f8f9fa",
+        "text-dark": "#08304E",
+      },
+      fontFamily: { display: ["Poppins", "sans-serif"] },
+    },
+  },
+};
+</script>
+</head>
+
+<body class="bg-neutral-light font-display">
+
+<!-- ⭐ Phone-width container -->
+<div class="w-full flex justify-center bg-neutral-light">
+  <div class="w-full max-w-[420px] bg-neutral-light min-h-screen relative pb-24">
+
+    <!-- Header -->
+    <div class="flex items-center justify-between px-4 py-4">
+      <a href="dashboard.html" class="flex items-center justify-center size-10 text-primary">
+        <span class="material-symbols-outlined">arrow_back_ios</span>
+      </a>
+      <h2 class="text-primary text-lg font-bold text-center flex-1 -translate-x-5">October 2024</h2>
+      <button class="flex items-center justify-center size-10 text-primary">
+        <span class="material-symbols-outlined">arrow_forward_ios</span>
+      </button>
+    </div>
+
+    <!-- Calendar -->
+    <div class="px-4">
+      <div class="bg-white rounded-xl shadow-sm p-4">
+
+        <!-- Weekdays -->
+        <div class="grid grid-cols-7 text-center mb-2">
+          <p class="text-primary/60 text-sm font-semibold">S</p>
+          <p class="text-primary/60 text-sm font-semibold">M</p>
+          <p class="text-primary/60 text-sm font-semibold">T</p>
+          <p class="text-primary/60 text-sm font-semibold">W</p>
+          <p class="text-primary/60 text-sm font-semibold">T</p>
+          <p class="text-primary/60 text-sm font-semibold">F</p>
+          <p class="text-primary/60 text-sm font-semibold">S</p>
+        </div>
+
+        <!-- Dates -->
+        <div class="grid grid-cols-7 gap-y-1">
+
+          <div class="flex justify-center items-center h-10 text-gray-400 col-start-1">29</div>
+          <div class="flex justify-center items-center h-10 text-gray-400">30</div>
+
+          <div class="relative flex justify-center items-center h-10 text-primary col-start-3">
+            1
+            <div class="absolute bottom-1.5 left-1/2 -translate-x-1/2 size-1.5 rounded-full bg-secondary"></div>
+          </div>
+
+          <div class="relative flex justify-center items-center h-10 text-primary">
+            2
+            <div class="absolute bottom-1.5 left-1/2 -translate-x-1/2 size-1.5 rounded-full bg-red-400"></div>
+          </div>
+
+          <div class="relative flex justify-center items-center h-10 text-primary">
+            3
+            <div class="absolute bottom-1.5 left-1/2 -translate-x-1/2 size-1.5 rounded-full bg-secondary"></div>
+          </div>
+
+          <div class="flex justify-center items-center h-10 text-primary">4</div>
+
+          <div class="relative flex justify-center items-center h-10 text-primary">
+            5
+            <div class="absolute bottom-1.5 left-1/2 -translate-x-1/2 size-1.5 rounded-full bg-secondary"></div>
+          </div>
+
+          <div class="flex justify-center items-center h-10 text-primary">6</div>
+          <div class="flex justify-center items-center h-10 text-primary">7</div>
+
+          <div class="relative flex justify-center items-center h-10 text-primary">
+            8
+            <div class="absolute bottom-1.5 left-1/2 -translate-x-1/2 size-1.5 rounded-full bg-secondary"></div>
+          </div>
+
+          <div class="flex justify-center items-center h-10 text-primary">9</div>
+          <div class="flex justify-center items-center h-10 text-primary">10</div>
+          <div class="flex justify-center items-center h-10 text-primary">11</div>
+          <div class="flex justify-center items-center h-10 text-primary">12</div>
+
+          <div class="relative flex justify-center items-center h-10 text-primary">
+            13
+            <div class="absolute bottom-1.5 left-1/2 -translate-x-1/2 size-1.5 rounded-full bg-secondary"></div>
+          </div>
+
+          <div class="flex justify-center items-center h-10 text-primary">14</div>
+
+          <div class="relative flex justify-center items-center h-10 text-primary">
+            15
+            <div class="absolute bottom-1.5 left-1/2 -translate-x-1/2 size-1.5 rounded-full bg-red-400"></div>
+          </div>
+
+          <div class="flex justify-center items-center h-10 text-primary">16</div>
+
+          <div class="relative flex justify-center items-center h-10 text-primary">
+            17
+            <div class="absolute bottom-1.5 left-1/2 -translate-x-1/2 size-1.5 rounded-full bg-secondary"></div>
+          </div>
+
+          <div class="flex justify-center items-center h-10 text-primary">18</div>
+
+          <div class="relative flex justify-center items-center h-10 text-primary">
+            19
+            <div class="absolute bottom-1.5 left-1/2 -translate-x-1/2 size-1.5 rounded-full bg-secondary"></div>
+          </div>
+
+          <div class="flex justify-center items-center h-10 text-primary">20</div>
+          <div class="flex justify-center items-center h-10 text-primary">21</div>
+
+          <div class="relative flex justify-center items-center h-10 text-primary">
+            22
+            <div class="absolute bottom-1.5 left-1/2 -translate-x-1/2 size-1.5 rounded-full bg-secondary"></div>
+          </div>
+
+          <div class="flex justify-center items-center h-10 text-primary">23</div>
+          <div class="flex justify-center items-center h-10 text-primary">24</div>
+          <div class="flex justify-center items-center h-10 text-primary">25</div>
+
+          <div class="relative flex justify-center items-center h-10 text-primary font-bold">
+            <span class="absolute inset-0 m-auto size-8 bg-accent rounded-full -z-10"></span>
+            26
+          </div>
+
+          <div class="flex justify-center items-center h-10 text-primary">27</div>
+          <div class="flex justify-center items-center h-10 text-primary">28</div>
+          <div class="flex justify-center items-center h-10 text-primary">29</div>
+          <div class="flex justify-center items-center h-10 text-primary">30</div>
+          <div class="flex justify-center items-center h-10 text-primary">31</div>
+
+          <div class="flex justify-center items-center h-10 text-gray-400">1</div>
+          <div class="flex justify-center items-center h-10 text-gray-400">2</div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Stats Section -->
+    <div class="flex flex-col gap-4 px-4 mt-6">
+      <div class="flex flex-wrap gap-4">
+        <div class="flex flex-1 min-w-[158px] flex-col rounded-xl p-4 bg-white shadow-sm">
+          <p class="text-primary/80 text-base font-medium">Reading Streak</p>
+          <p class="text-primary text-2xl font-bold">15 Days 🔥</p>
+        </div>
+        <div class="flex flex-1 min-w-[158px] flex-col rounded-xl p-4 bg-white shadow-sm">
+          <p class="text-primary/80 text-base font-medium">Completion</p>
+          <p class="text-primary text-2xl font-bold">85%</p>
+        </div>
+      </div>
+
+      <h3 class="text-primary text-2xl font-bold pt-2">October 26 Habits</h3>
+
+      <div class="bg-white rounded-xl p-2 shadow-sm">
+        <label class="flex items-center gap-3 py-3 px-2">
+          <input type="checkbox" checked class="h-6 w-6 rounded-md border-secondary border-2 checked:bg-accent checked:border-accent" />
+          <p class="text-primary text-base">Drink 8 glasses of water</p>
+        </label>
+        <div class="h-px bg-gray-200"></div>
+        <label class="flex items-center gap-3 py-3 px-2">
+          <input type="checkbox" class="h-6 w-6 rounded-md border-secondary border-2 checked:bg-accent checked:border-accent" />
+          <p class="text-primary text-base">Read for 15 minutes</p>
+        </label>
+        <div class="h-px bg-gray-200"></div>
+        <label class="flex items-center gap-3 py-3 px-2">
+          <input type="checkbox" checked class="h-6 w-6 rounded-md border-secondary border-2 checked:bg-accent checked:border-accent" />
+          <p class="text-primary text-base">Meditate for 5 minutes</p>
+        </label>
+      </div>
+    </div>
+
+    <!-- ⭐ Bottom Navigation (IDENTICAL to dashboard) -->
+    <div class="fixed bottom-0 left-0 right-0 h-20 bg-primary shadow-lg rounded-t-xl px-4 flex items-center justify-around z-10 max-w-[420px] mx-auto">
+
+      <a href="dashboard.html" class="flex flex-col items-center text-accent/70">
+        <span class="material-symbols-outlined text-2xl">home</span>
+        <span class="text-xs font-medium">Home</span>
+      </a>
+
+      <a href="reflection.html" class="flex flex-col items-center text-accent/70">
+        <span class="material-symbols-outlined text-2xl">calendar_today</span>
+        <span class="text-xs font-medium">Journal</span>
+      </a>
+
+      <a href="add-habit.html" class="relative -translate-y-4 flex size-16 items-center justify-center rounded-full bg-accent text-primary shadow-lg">
+        <span class="material-symbols-outlined text-4xl">add</span>
+      </a>
+
+      <a href="settings.html" class="flex flex-col items-center text-accent/70">
+        <span class="material-symbols-outlined text-2xl">settings</span>
+        <span class="text-xs font-medium">Settings</span>
+      </a>
+
+      <a href="profile.html" class="flex flex-col items-center text-accent/70">
+        <span class="material-symbols-outlined text-2xl">person</span>
+        <span class="text-xs font-medium">Profile</span>
+      </a>
+
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>

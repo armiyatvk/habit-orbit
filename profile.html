@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Profile</title>
+
+<!-- Tailwind -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
+<style>
+  body { font-family: 'Poppins', sans-serif; }
+  .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  }
+</style>
+
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        primary: "#08304E",
+        secondary: "#87CEEB",
+        accent: "#FEF0AD",
+        "neutral-light": "#f8f9fa",
+        "text-dark": "#08304E",
+      },
+      fontFamily: { display: ["Poppins", "sans-serif"] },
+    },
+  },
+};
+</script>
+</head>
+
+<body class="bg-neutral-light text-text-dark font-display">
+
+<!-- ⭐ PHONE WIDTH WRAPPER (MATCHES DASHBOARD) -->
+<div class="w-full flex justify-center bg-neutral-light">
+<div class="w-full max-w-[420px] bg-neutral-light min-h-screen relative">
+
+<!-- ⭐ Page Content -->
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<div class="p-6 pb-28 flex flex-col gap-6">
+
+    <!-- HEADER -->
+    <div class="flex items-center justify-between">
+      <h1 class="text-primary text-2xl font-bold">Profile</h1>
+
+      <a href="settings.html" class="flex items-center justify-center size-10 text-primary">
+        <span class="material-symbols-outlined text-3xl">settings</span>
+      </a>
+    </div>
+
+    <!-- PROFILE AVATAR -->
+    <div class="flex flex-col items-center gap-6 mt-2">
+      <div class="h-40 w-40 rounded-full bg-gray-300 flex items-center justify-center">
+        <span class="material-symbols-outlined text-[90px] text-gray-400">person</span>
+      </div>
+
+      <!-- Nickname -->
+      <div class="w-full">
+        <p class="text-center text-lg font-semibold text-text-dark">Nickname</p>
+        <input 
+          class="w-full h-12 mt-2 bg-white rounded-xl border border-gray-300 text-center text-text-dark"
+          type="text" value="Jordan Smith" />
+      </div>
+
+      <!-- Orbit Colors -->
+      <div class="w-full">
+        <p class="text-center text-lg font-semibold text-text-dark">Orbit Color</p>
+
+        <div class="flex justify-center gap-3 mt-3">
+          <button class="h-10 w-10 rounded-full border-2 border-primary bg-[#3498db]"></button>
+          <button class="h-10 w-10 rounded-full border-2 border-transparent bg-[#e74c3c]"></button>
+          <button class="h-10 w-10 rounded-full border-2 border-transparent bg-[#2ecc71]"></button>
+          <button class="h-10 w-10 rounded-full border-2 border-transparent bg-[#f1c40f]"></button>
+          <button class="h-10 w-10 rounded-full border-2 border-transparent bg-[#9b59b6]"></button>
+          <button class="h-10 w-10 rounded-full border-2 border-transparent bg-[#e67e22]"></button>
+        </div>
+      </div>
+    </div>
+
+    <!-- BUTTONS -->
+    <div class="flex flex-col gap-4 mt-8">
+      <button onclick="showPopup('Your profile has been updated successfully.')"
+              class="h-14 rounded-xl bg-primary text-white text-base font-semibold">
+        Save
+      </button>
+    </div>
+
+</div>
+
+<!-- ⭐ Bottom Navigation (EXACT SAME AS DASHBOARD) -->
+<div class="fixed bottom-0 left-0 right-0 h-20 bg-primary shadow-lg rounded-t-xl px-4 flex items-center justify-around z-10 max-w-[420px] mx-auto">
+
+  <!-- HOME -->
+  <a href="dashboard.html" class="flex flex-col items-center text-accent/70">
+    <span class="material-symbols-outlined text-2xl">home</span>
+    <span class="text-xs font-medium">Home</span>
+  </a>
+
+  <!-- CALENDAR -->
+  <a href="reflection.html" class="flex flex-col items-center text-accent/70">
+          <span class="material-symbols-outlined text-2xl">calendar_today</span>
+          <span class="text-xs font-medium">Journal</span>
+        </a>
+
+  <!-- ADD -->
+  <a href="add-habit.html" class="relative -translate-y-4 flex size-16 items-center justify-center rounded-full bg-accent text-primary shadow-lg">
+    <span class="material-symbols-outlined text-4xl">add</span>
+  </a>
+
+  <!-- SETTINGS -->
+  <a href="settings.html" class="flex flex-col items-center text-accent/70">
+    <span class="material-symbols-outlined text-2xl">settings</span>
+    <span class="text-xs font-medium">Settings</span>
+  </a>
+
+  <!-- PROFILE — ACTIVE -->
+  <a href="profile.html" class="flex flex-col items-center text-accent">
+    <span class="material-symbols-outlined text-2xl" style="font-variation-settings:'FILL' 1;">person</span>
+    <span class="text-xs font-bold">Profile</span>
+  </a>
+
+</div>
+
+</div>
+</div>
+
+<!-- ⭐ POPUP -->
+<div id="popup-success"
+     class="fixed inset-0 z-50 hidden flex items-center justify-center bg-black/30 backdrop-blur-sm">
+
+  <div class="mx-6 max-w-sm w-full bg-white rounded-3xl p-8 text-center shadow-lg flex flex-col items-center gap-4 animate-popup">
+
+    <div class="size-16 flex items-center justify-center rounded-full bg-accent">
+      <span class="material-symbols-outlined text-4xl text-primary">check_circle</span>
+    </div>
+
+    <h3 class="text-2xl font-bold text-primary">Success!</h3>
+
+    <p id="popup-message" class="text-base text-primary/80">
+      Action completed successfully.
+    </p>
+
+    <button onclick="hidePopup()" 
+      class="w-full mt-3 py-3.5 rounded-full bg-primary text-accent font-semibold">
+      Continue
+    </button>
+  </div>
+</div>
+
+<style>
+@keyframes popup-scale {
+  0% { transform: scale(0.85); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+.animate-popup { animation: popup-scale 0.25s ease-out; }
+</style>
+
+<script>
+function showPopup(message) {
+  document.getElementById("popup-message").textContent = message;
+  document.getElementById("popup-success").classList.remove("hidden");
+}
+function hidePopup() {
+  document.getElementById("popup-success").classList.add("hidden");
+}
+</script>
+
+</body>
+</html>

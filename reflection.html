@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Reflection Journal</title>
+
+<!-- Tailwind -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+
+<style>
+  body { font-family: 'Poppins', sans-serif; background:#f8f9fa; }
+  .material-symbols-outlined {
+    font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  }
+</style>
+</head>
+
+<script>
+  function showPopup(message) {
+    document.getElementById("popup-message").textContent = message;
+    document.getElementById("popup-success").classList.remove("hidden");
+  }
+
+  function hidePopup() {
+    document.getElementById("popup-success").classList.add("hidden");
+  }
+</script>
+
+
+<body class="bg-[#f8f9fa]">
+
+<!-- ⭐ Phone Frame — SAME AS DASHBOARD -->
+<div class="w-full flex justify-center bg-[#f8f9fa]">
+  <div class="w-full max-w-[420px] min-h-screen bg-[#f8f9fa] relative">
+
+    <!-- PAGE CONTAINER -->
+    <div class="relative flex flex-col min-h-screen overflow-x-hidden bg-[#f8f9fa]">
+
+      <!-- Top App Bar -->
+     <header class="flex items-center justify-between p-4 sticky top-0 bg-[#F8F9FA] z-10">
+    <!-- Back button -->
+    <a href="dashboard.html" class="flex size-12 items-center justify-center text-primary">
+        <span class="material-symbols-outlined text-3xl">arrow_back_ios</span>
+    </a>
+
+    <h1 class="text-primary text-lg font-bold leading-tight">Reflection Journal</h1>
+
+    <!-- Right icon -->
+    <button class="flex size-12 items-center justify-center text-primary">
+        <span class="material-symbols-outlined text-2xl">notifications</span>
+    </button>
+</header>
+
+      <!-- MAIN CONTENT -->
+      <main class="flex-grow px-4 pb-32">
+
+        <!-- Date Picker ListItem -->
+        <div class="flex items-center gap-4 py-4 min-h-14 justify-between">
+          <div class="flex items-center gap-4">
+            <div class="text-[#08304E] flex items-center justify-center rounded-lg bg-[#A8DADC]/50 size-10">
+              <span class="material-symbols-outlined">calendar_today</span>
+            </div>
+            <p class="text-[#08304E] text-base font-medium truncate">October 26, 2023</p>
+          </div>
+
+          <div class="shrink-0">
+            <span class="material-symbols-outlined text-[#08304E]">expand_more</span>
+          </div>
+        </div>
+
+        <!-- Mood Selector -->
+        <h3 class="text-[#08304E] text-2xl font-bold pt-5 pb-2">How are you feeling?</h3>
+
+        <div class="flex py-3">
+          <div class="flex h-16 flex-1 items-center justify-between rounded-xl bg-[#A8DADC]/30 p-1 space-x-1">
+
+            <!-- moods unchanged -->
+            <label class="flex cursor-pointer h-full grow flex-col items-center justify-center rounded-lg px-2 has-[:checked]:bg-white has-[:checked]:shadow has-[:checked]:text-[#08304E] text-[#08304E]/70 transition-all">
+              <span class="material-symbols-outlined text-3xl mb-1">sentiment_very_satisfied</span>
+              <span class="text-xs">Happy</span>
+              <input type="radio" name="mood-selector" class="invisible">
+            </label>
+
+            <label class="flex cursor-pointer h-full grow flex-col items-center justify-center rounded-lg px-2 has-[:checked]:bg-white has-[:checked]:shadow has-[:checked]:text-[#08304E] text-[#08304E]/70 transition-all">
+              <span class="material-symbols-outlined text-3xl mb-1">sentiment_satisfied</span>
+              <span class="text-xs">Good</span>
+              <input type="radio" checked name="mood-selector" class="invisible">
+            </label>
+
+            <label class="flex cursor-pointer h-full grow flex-col items-center justify-center rounded-lg px-2 has-[:checked]:bg-white has-[:checked]:shadow has-[:checked]:text-[#08304E] text-[#08304E]/70 transition-all">
+              <span class="material-symbols-outlined text-3xl mb-1">sentiment_neutral</span>
+              <span class="text-xs">Neutral</span>
+              <input type="radio" name="mood-selector" class="invisible">
+            </label>
+
+            <label class="flex cursor-pointer h-full grow flex-col items-center justify-center rounded-lg px-2 has-[:checked]:bg-white has-[:checked]:shadow has-[:checked]:text-[#08304E] text-[#08304E]/70 transition-all">
+              <span class="material-symbols-outlined text-3xl mb-1">sentiment_dissatisfied</span>
+              <span class="text-xs">Sad</span>
+              <input type="radio" name="mood-selector" class="invisible">
+            </label>
+
+            <label class="flex cursor-pointer h-full grow flex-col items-center justify-center rounded-lg px-2 has-[:checked]:bg-white has-[:checked]:shadow has-[:checked]:text-[#08304E] text-[#08304E]/70 transition-all">
+              <span class="material-symbols-outlined text-3xl mb-1">sentiment_very_dissatisfied</span>
+              <span class="text-xs">Awful</span>
+              <input type="radio" name="mood-selector" class="invisible">
+            </label>
+
+          </div>
+        </div>
+
+        <!-- Journal Entry -->
+        <h3 class="text-[#08304E] text-2xl font-bold pt-5 pb-2">Your Thoughts</h3>
+
+        <div class="mt-2 mb-8">
+          <textarea
+            class="w-full h-48 resize-none rounded-xl bg-white p-4 text-base text-[#08304E] shadow placeholder:text-[#08304E]/50 focus:outline-none focus:ring-2 focus:ring-[#A8DADC]"
+            placeholder="Write about your progress, challenges, and feelings..."></textarea>
+        </div>
+
+        <!-- Save Button -->
+        <button class="w-full rounded-full bg-[#08304E] py-4 text-lg font-semibold text-[#FEF0AD] shadow hover:bg-[#08304E]/90" onclick="showPopup('Reflection saved successfully!')">
+          Save Reflection
+        </button>
+
+      </main>
+
+      <!-- ⭐ Bottom Nav — SAME AS DASHBOARD -->
+      <div class="fixed bottom-0 left-0 right-0 h-20 bg-[#08304E] shadow-lg rounded-t-xl px-4
+                  flex items-center justify-around z-20 max-w-[420px] mx-auto">
+
+        <a href="dashboard.html" class="flex flex-col items-center text-[#FEF0AD]/70">
+          <span class="material-symbols-outlined text-2xl">home</span>
+          <span class="text-xs">Home</span>
+        </a>
+
+        <a href="reflection.html" class="flex flex-col items-center text-[#FEF0AD]">
+          <span class="material-symbols-outlined text-2xl">calendar_today</span>
+          <span class="text-xs font-bold">Journal</span>
+        </a>
+
+        <a href="add-habit.html" class="relative -translate-y-4 flex size-16 items-center justify-center rounded-full bg-[#FEF0AD] text-[#08304E] shadow-lg">
+          <span class="material-symbols-outlined text-4xl">add</span>
+        </a>
+
+        <a href="settings.html" class="flex flex-col items-center text-[#FEF0AD]/70">
+          <span class="material-symbols-outlined text-2xl">settings</span>
+          <span class="text-xs">Settings</span>
+        </a>
+
+        <a href="profile.html" class="flex flex-col items-center text-[#FEF0AD]/70">
+          <span class="material-symbols-outlined text-2xl">person</span>
+          <span class="text-xs">Profile</span>
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+...
+</nav>   <!-- your bottom nav -->
+
+<!-- ⭐ PUT THE POPUP RIGHT HERE -->
+<div id="popup-success"
+     class="fixed inset-0 z-50 hidden flex items-center justify-center bg-black/30 backdrop-blur-sm">
+
+  <div class="mx-6 w-full max-w-sm rounded-3xl bg-white p-8 text-center shadow-[0_4px_20px_rgba(0,0,0,0.2)] flex flex-col items-center gap-4 animate-popup">
+
+    <div class="flex size-16 items-center justify-center rounded-full bg-[#FEF0AD]">
+      <span class="material-symbols-outlined text-4xl text-[#08304E]">check_circle</span>
+    </div>
+
+    <h3 class="text-2xl font-bold text-[#08304E]">Success!</h3>
+
+    <p id="popup-message" class="text-base text-[#08304E]/80">
+      Action completed successfully.
+    </p>
+
+    <button
+      onclick="hidePopup()"
+      class="mt-2 w-full rounded-full bg-[#08304E] py-3.5 text-base font-semibold text-[#FEF0AD] shadow-md hover:bg-[#08304E]/90 transition">
+      Continue
+    </button>
+
+  </div>
+</div>
+
+<style>
+  @keyframes popup-scale {
+    0% { transform: scale(0.85); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+  }
+  .animate-popup { animation: popup-scale 0.25s ease-out; }
+</style>
+
+<script>
+  function showPopup(message) {
+    document.getElementById("popup-message").textContent = message;
+    document.getElementById("popup-success").classList.remove("hidden");
+  }
+
+  function hidePopup() {
+    document.getElementById("popup-success").classList.add("hidden");
+  }
+</script>
+
+</body>
+</html>
+
+
+</body>
+</html>
