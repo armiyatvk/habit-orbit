@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Create Account - Habit Tracker</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<style>
+      body {
+        font-family: 'Poppins', sans-serif;
+      }
+    </style>
+<script id="tailwind-config">
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#001F3F", // Deep Navy
+              "secondary": "#87CEEB", // Sky Blue
+              "accent": "#FFFACD", // Soft Yellow
+              "text-main": "#001F3F", // Changed to Deep Navy for light bg
+              "text-input": "#001F3F", // Text color for input on accent background
+              "background-light": "#F0F4F8", // New light background
+              "background-dark": "#001F3F" // Same for dark mode as per request
+            },
+            fontFamily: {
+              "display": ["Poppins", "sans-serif"]
+            },
+            borderRadius: {
+              "DEFAULT": "0.5rem", 
+              "lg": "0.75rem",
+              "xl": "1rem",
+              "full": "9999px"
+            },
+            ringColor: {
+              'secondary': '#87CEEB',
+            }
+          },
+        },
+      }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light font-display">
+<div class="relative flex h-auto min-h-screen w-full flex-col items-center group/design-root overflow-x-hidden p-4 sm:p-6">
+<main class="flex w-full max-w-md flex-col items-center justify-center pt-12 sm:pt-20">
+<h1 class="text-text-main tracking-light text-[32px] font-bold leading-tight text-center pb-8">Create Your Account</h1>
+<div class="w-full space-y-4">
+<div class="flex w-full flex-wrap items-end gap-4">
+<label class="flex flex-col min-w-40 flex-1">
+<p class="text-text-main text-base font-medium leading-normal pb-2">Username</p>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-text-input focus:outline-0 focus:ring-2 focus:ring-secondary border-none bg-white h-14 placeholder:text-gray-500 p-4 text-base font-normal leading-normal" placeholder="Enter your username" value=""/>
+</label>
+</div>
+<div class="flex w-full flex-wrap items-end gap-4">
+<label class="flex flex-col min-w-40 flex-1">
+<p class="text-text-main text-base font-medium leading-normal pb-2">Email</p>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-text-input focus:outline-0 focus:ring-2 focus:ring-secondary border-none bg-white h-14 placeholder:text-gray-500 p-4 text-base font-normal leading-normal" placeholder="Enter your email address" type="email" value=""/>
+</label>
+</div>
+<div class="flex w-full flex-wrap items-end gap-4">
+<label class="flex flex-col min-w-40 flex-1">
+<p class="text-text-main text-base font-medium leading-normal pb-2">Password</p>
+<div class="flex w-full flex-1 items-stretch rounded-lg bg-white focus-within:ring-2 focus-within:ring-secondary">
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-l-lg text-text-input focus:outline-0 focus:ring-0 border-none bg-transparent h-14 placeholder:text-gray-500 p-4 pr-2 text-base font-normal leading-normal" placeholder="Enter your password" type="password" value=""/>
+<button aria-label="Toggle password visibility" class="text-gray-500 flex items-center justify-center px-4">
+<span class="material-symbols-outlined">visibility</span>
+</button>
+</div>
+</label>
+</div>
+<div class="pt-4">
+  <a href="dashboard.html"
+     class="flex min-w-[84px] w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg h-14 px-5 flex-1 bg-primary text-accent text-lg font-bold leading-normal tracking-[0.015em] hover:opacity-90 transition-opacity">
+    <span class="truncate">Create Account</span>
+  </a>
+</div>
+
+</div>
+<div class="flex w-full items-center gap-4 py-6">
+<hr class="flex-1 border-t border-text-main/30"/>
+<p class="text-text-main/60 text-sm">OR</p>
+<hr class="flex-1 border-t border-text-main/30"/>
+</div>
+<div class="w-full space-y-4">
+<button class="flex w-full items-center justify-center gap-3 rounded-lg border border-text-main/30 bg-transparent h-12 px-5 text-text-main text-base font-semibold leading-normal hover:bg-black/5 transition-colors">
+<svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_3033_581)"><path d="M22.578 12.273C22.578 11.4589 22.506 10.6691 22.378 9.90909H12.24V14.3H18.11C17.844 15.8273 17.022 17.1164 15.744 17.9782V20.7382H19.538C21.488 18.9818 22.578 16.0364 22.578 12.273Z" fill="#4285F4"></path><path d="M12.24 23.0002C15.222 23.0002 17.74 22.0147 19.538 20.7384L15.744 17.9784C14.736 18.6656 13.566 19.0802 12.24 19.0802C9.408 19.0802 6.994 17.2038 6.136 14.6838H2.228V17.5311C4.01 20.7602 7.8 23.0002 12.24 23.0002Z" fill="#34A853"></path><path d="M6.13602 14.6836C5.89802 13.9854 5.76002 13.2327 5.76002 12.45C5.76002 11.6672 5.89802 10.9145 6.13602 10.2163V7.36899H2.22802C1.45802 8.88535 1.02202 10.6035 1.02202 12.45C1.02202 14.2963 1.45802 16.0145 2.22802 17.5308L6.13602 14.6836Z" fill="#FBBC05"></path><path d="M12.24 5.81995C13.714 5.81995 15.018 6.33813 16.056 7.32358L19.626 3.87268C17.732 2.11632 15.214 0.899951 12.24 0.899951C7.8 0.899951 4.01 3.13995 2.228 6.36899L6.136 9.21628C6.994 6.69628 9.408 4.81995 12.24 4.81995V5.81995Z" fill="#EA4335"></path></g><defs><clipPath id="clip0_3033_581"><rect fill="white" height="22.2" transform="translate(1.02202 0.899951)" width="21.98"></rect></clipPath></defs></svg>
+<span>Continue with Google</span>
+</button>
+<button class="flex w-full items-center justify-center gap-3 rounded-lg border border-text-main/30 bg-transparent h-12 px-5 text-text-main text-base font-semibold leading-normal hover:bg-black/5 transition-colors">
+<svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.618 18.462C16.295 19.431 14.93 20.001 13.431 20.001C12.43 20.001 11.96 19.781 11.029 19.331C10.088 18.881 9.078 18.131 8.257 17.011C7.036 15.35 6.465 13.25 6.465 10.87C6.465 8.499 7.086 6.469 8.368 4.868C9.178 3.828 10.169 3.128 11.239 2.688C12.31 2.248 13.111 2.028 14.191 2.028C15.742 2.028 17.152 2.588 18.233 3.658C18.673 4.078 19.003 4.598 19.233 5.148L19.284 5.258C19.334 5.358 19.334 5.438 19.274 5.508L17.843 6.899C17.733 6.999 17.623 7.009 17.513 6.919C16.922 6.449 16.232 6.049 15.281 6.049C14.541 6.049 13.911 6.299 13.37 6.779C12.83 7.249 12.56 7.959 12.56 8.949C12.56 9.599 12.72 10.159 13.04 10.639C13.37 11.109 13.8 11.459 14.331 11.669C14.861 11.879 15.542 12.009 16.392 12.009H17.523C17.653 12.009 17.763 12.119 17.763 12.249V12.539C17.763 13.789 17.473 14.789 16.892 15.519C16.312 16.249 15.502 16.639 14.511 16.639C13.881 16.639 13.341 16.489 12.871 16.179C12.401 15.869 12.021 15.489 11.721 15.019C11.641 14.899 11.511 14.849 11.381 14.899L10.059 15.489C9.939 15.539 9.879 15.659 9.929 15.779C10.369 16.949 11.119 17.889 12.11 18.429C12.83 18.829 13.57 18.999 14.451 18.999C15.252 18.999 15.932 18.819 16.532 18.462H17.618Z"></path></svg>
+<span>Continue with Apple</span>
+</button>
+</div>
+<div class="w-full text-center mt-8 space-y-2">
+<p class="text-text-main text-sm">
+                    Already have an account? 
+                    <a class="font-bold text-secondary hover:underline" href="#">Log In</a>
+</p>
+<p class="text-text-main/60 text-xs px-4">
+                    By creating an account, you agree to our 
+                    <a class="underline hover:text-text-main" href="#">Terms of Service</a> and 
+                    <a class="underline hover:text-text-main" href="#">Privacy Policy</a>.
+                </p>
+</div>
+</main>
+</div>
+
+</body></html>

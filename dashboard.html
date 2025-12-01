@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Habit Tracker Dashboard</title>
+
+<!-- Tailwind -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
+<style>
+  body { font-family: 'Poppins', sans-serif; }
+  .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  }
+  .motivation-scrollbar::-webkit-scrollbar { width: 4px; height: 4px; }
+  .motivation-scrollbar::-webkit-scrollbar-track { background: transparent; }
+  .motivation-scrollbar::-webkit-scrollbar-thumb { background: #08304E; border-radius: 2px; }
+  .motivation-scrollbar::-webkit-scrollbar-thumb:hover { background: #06263e; }
+</style>
+
+<script>
+tailwind.config = {
+    theme: {
+        extend: {
+            colors: {
+                primary: "#08304E",
+                secondary: "#87CEEB",
+                accent: "#FEF0AD",
+                success: "#2ECC71",
+                "neutral-light": "#f8f9fa",
+                "neutral-dark": "#1a2c42",
+                "text-light": "#ffffff",
+                "text-dark": "#08304E",
+                "text-subtle-light": "#e9ecef",
+                "text-subtle-dark": "#87CEEB",
+            },
+            fontFamily: { display: ["Poppins", "sans-serif"] },
+            borderRadius: { DEFAULT: "0.5rem", lg: "0.75rem", xl: "1rem", full: "9999px" },
+        },
+    },
+};
+</script>
+</head>
+
+<body class="bg-neutral-light text-text-dark font-display">
+
+<!-- ⭐ Mobile Phone Frame -->
+<div class="w-full flex justify-center bg-neutral-light">
+  <div class="w-full max-w-[420px] bg-neutral-light min-h-screen relative">
+
+    <!-- PAGE CONTENT -->
+    <div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+      <div class="flex flex-col gap-4 p-6 pb-28">
+
+        <p class="text-text-dark/60 text-base font-normal">Home Dashboard</p>
+
+        <!-- DAILY PROGRESS -->
+        <div class="flex flex-col gap-4">
+          <h2 class="text-text-dark text-2xl font-bold">Daily Progress</h2>
+          <div class="flex items-center gap-3">
+            <div class="w-full bg-gray-200 rounded-full h-2.5">
+              <div class="bg-primary h-2.5 rounded-full" style="width: 80%"></div>
+            </div>
+            <span class="text-text-dark font-semibold">80%</span>
+          </div>
+        </div>
+
+        <!-- STREAK -->
+        <div class="flex flex-col gap-2">
+          <h2 class="text-text-dark text-xl font-bold">Streak days</h2>
+          <div class="flex gap-2">
+            <div class="size-6 bg-primary rounded"></div>
+            <div class="size-6 bg-primary rounded"></div>
+            <div class="size-6 bg-gray-200 rounded"></div>
+            <div class="size-6 bg-gray-200 rounded"></div>
+            <div class="size-6 bg-gray-200 rounded"></div>
+            <div class="size-6 bg-gray-200 rounded"></div>
+            <div class="size-6 bg-gray-200 rounded"></div>
+            <div class="size-6 bg-gray-200 rounded"></div>
+            <div class="size-6 bg-gray-200 rounded"></div>
+          </div>
+        </div>
+
+        <!-- GRID CARDS -->
+        <div class="grid grid-cols-2 gap-4">
+
+          <!-- Reflection -->
+          <a href="reflection.html" class="bg-white p-4 rounded-xl shadow-sm flex flex-col justify-between h-36">
+            <div class="flex justify-between items-start">
+              <h3 class="text-text-dark font-bold text-base leading-tight">Reflection Journal</h3>
+              <span class="material-symbols-outlined text-primary">arrow_forward</span>
+            </div>
+            <div class="bg-secondary/20 h-12 rounded-lg flex items-center px-3">
+              <p class="text-text-dark/70 text-sm">Daily check-in...</p>
+            </div>
+          </a>
+
+          <!-- Motivation Feed -->
+          <a href="motivation-feed.html" class="bg-white p-4 rounded-xl shadow-sm flex flex-col justify-between h-36">
+            <div class="flex justify-between items-start">
+              <h3 class="text-text-dark font-bold text-base leading-tight">Motivation Feed</h3>
+              <span class="material-symbols-outlined text-primary">arrow_forward</span>
+            </div>
+            <div class="bg-secondary/20 h-12 rounded-lg flex items-start p-3 overflow-hidden">
+              <div class="overflow-y-auto h-full pr-2 motivation-scrollbar">
+                <p class="text-text-dark/90 text-sm leading-tight">
+                  "Success is the sum of small efforts…"
+                </p>
+              </div>
+            </div>
+          </a>
+
+          <!-- Calendar -->
+          <a href="calendar.html" class="bg-white p-4 rounded-xl shadow-sm flex flex-col justify-between h-36">
+            <div class="flex justify-between items-start">
+              <h3 class="text-text-dark font-bold text-base leading-tight">Calendar</h3>
+              <span class="material-symbols-outlined text-primary">arrow_forward</span>
+            </div>
+
+            <!-- FIXED RESPONSIVE CALENDAR -->
+            <div class="flex flex-col items-center justify-center h-full w-full">
+              <div class="text-text-dark/60 text-[10px] grid grid-cols-7 gap-y-1 w-full text-center">
+                <div>S</div><div>M</div><div>T</div><div>W</div><div>T</div><div>F</div><div>S</div>
+              </div>
+
+              <div class="text-text-dark text-xs grid grid-cols-7 gap-y-1 w-full text-center mt-1">
+                <div class="text-text-dark/40">28</div>
+                <div class="text-text-dark/40">29</div>
+                <div class="text-text-dark/40">30</div>
+                <div>1</div><div>2</div><div>3</div><div>4</div>
+                <div>5</div>
+                <div class="bg-accent text-primary rounded-full aspect-square flex items-center justify-center font-bold">6</div>
+                <div>7</div><div>8</div><div>9</div><div>10</div><div>11</div>
+              </div>
+            </div>
+          </a>
+
+          <!-- Rewards -->
+          <a href="rewards.html" class="bg-white p-4 rounded-xl shadow-sm flex flex-col justify-between h-36">
+            <div class="flex justify-between items-start">
+              <h3 class="text-text-dark font-bold text-base leading-tight">Rewards</h3>
+              <span class="material-symbols-outlined text-primary">arrow_forward</span>
+            </div>
+
+            <!-- FIXED RESPONSIVE REWARDS -->
+            <div class="grid grid-cols-3 gap-2 mt-2 w-full">
+              <div class="bg-accent aspect-square rounded-full flex items-center justify-center">
+                <span class="material-symbols-outlined text-primary" style="font-variation-settings:'FILL' 1;">star</span>
+              </div>
+              <div class="bg-accent aspect-square rounded-full flex items-center justify-center">
+                <span class="material-symbols-outlined text-primary" style="font-variation-settings:'FILL' 1;">local_fire_department</span>
+              </div>
+              <div class="bg-secondary/50 aspect-square rounded-full flex items-center justify-center">
+                <span class="material-symbols-outlined text-primary/70">trophy</span>
+              </div>
+              <div class="bg-secondary/50 aspect-square rounded-full flex items-center justify-center">
+                <span class="material-symbols-outlined text-primary/70">military_tech</span>
+              </div>
+              <div class="bg-gray-200 aspect-square rounded-full flex items-center justify-center">
+                <span class="material-symbols-outlined text-text-dark/50">lock</span>
+              </div>
+              <div class="bg-gray-200 aspect-square rounded-full flex items-center justify-center">
+                <span class="material-symbols-outlined text-text-dark/50">lock</span>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- Today's Habits -->
+        <div class="flex flex-col gap-3 mt-4">
+          <div class="flex justify-between items-center">
+            <h2 class="text-text-dark text-xl font-bold">Today's Habits</h2>
+            <a href="add-habit.html" class="bg-primary text-accent rounded-full size-8 flex items-center justify-center">
+              <span class="material-symbols-outlined text-2xl">add</span>
+            </a>
+          </div>
+
+          <a href="habit-detail.html">
+            <div class="flex items-center gap-4 bg-white rounded-lg p-3 shadow-sm border border-gray-200">
+            <div class="bg-secondary/30 size-10 rounded-lg flex items-center justify-center">
+              <span class="material-symbols-outlined text-primary">local_fire_department</span>
+            </div>
+            <p class="text-text-dark text-base font-medium flex-grow">Morning Jog</p>
+          </div>
+          </a>
+
+          <a href="habit-detail.html">
+          <div class="flex items-center gap-4 bg-white rounded-lg p-3 shadow-sm border border-gray-200">
+            <div class="bg-secondary/30 size-10 rounded-lg flex items-center justify-center">
+              <span class="material-symbols-outlined text-primary">menu_book</span>
+            </div>
+            <p class="text-text-dark text-base font-medium flex-grow">Read for 15 mins</p>
+          </div>
+          </a>
+
+          <a href="habit-detail.html">
+          <div class="flex items-center gap-4 bg-white rounded-lg p-3 shadow-sm border border-gray-200">
+            <div class="bg-secondary/30 size-10 rounded-lg flex items-center justify-center">
+              <span class="material-symbols-outlined text-primary">water_drop</span>
+            </div>
+            <p class="text-text-dark text-base font-medium flex-grow">Drink 8 glasses of water</p>
+          </div>
+          </a>
+          
+        </div>
+      </div>
+
+      <!-- ⭐ Bottom Navigation (updated for active highlighting) -->
+<div class="fixed bottom-0 left-0 right-0 h-20 bg-primary shadow-lg rounded-t-xl px-4 flex items-center justify-around z-10 max-w-[420px] mx-auto">
+
+  <!-- HOME — ACTIVE -->
+  <a href="dashboard.html" class="flex flex-col items-center text-accent">
+    <span class="material-symbols-outlined text-2xl"
+          style="font-variation-settings:'FILL' 1;">home</span>
+    <span class="text-xs font-bold">Home</span>
+  </a>
+
+  <!-- CALENDAR -->
+ <a href="reflection.html" class="flex flex-col items-center text-accent/70">
+          <span class="material-symbols-outlined text-2xl">calendar_today</span>
+          <span class="text-xs font-medium">Journal</span>
+        </a>
+
+  <!-- ADD -->
+  <a href="add-habit.html" class="relative -translate-y-4 flex size-16 items-center justify-center rounded-full bg-accent text-primary shadow-lg">
+    <span class="material-symbols-outlined text-4xl">add</span>
+  </a>
+
+  <!-- SETTINGS -->
+  <a href="settings.html" class="flex flex-col items-center text-accent/70">
+    <span class="material-symbols-outlined text-2xl">settings</span>
+    <span class="text-xs font-medium">Settings</span>
+  </a>
+
+  <!-- PROFILE -->
+  <a href="profile.html" class="flex flex-col items-center text-accent/70">
+    <span class="material-symbols-outlined text-2xl">person</span>
+    <span class="text-xs font-medium">Profile</span>
+  </a>
+
+</div>
+
+
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

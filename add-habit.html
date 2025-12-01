@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Add New Habit</title>
+
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+
+<style>
+  body { font-family: "Poppins", sans-serif; }
+  .material-symbols-outlined {
+    font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24;
+  }
+</style>
+
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        primary: "#08304E",
+        secondary: "#87CEEB",
+        accent: "#FEF0AD",
+        light: "#F8F9FA",
+      },
+      fontFamily: { display: ["Poppins", "sans-serif"] },
+    },
+  },
+};
+</script>
+</head>
+
+<body class="bg-light font-display">
+
+<!-- ⭐ CENTERED PHONE FRAME -->
+<div class="w-full flex justify-center bg-light">
+  <div class="w-full max-w-[420px] bg-light min-h-screen relative pb-24 overflow-x-hidden">
+
+    <!-- ⭐ HEADER -->
+    <div class="flex items-center justify-between p-4 pb-2 sticky top-0 bg-light z-10 border-b border-gray-200">
+      <a href="dashboard.html" class="text-primary flex size-10 items-center justify-center">
+        <span class="material-symbols-outlined text-3xl">close</span>
+      </a>
+      <h2 class="text-primary text-lg font-semibold flex-1 text-center -translate-x-5">
+        Add New Habit
+      </h2>
+    </div>
+
+    <!-- PAGE CONTENT -->
+    <div class="p-4 flex flex-col gap-6">
+
+      <!-- Habit Name -->
+      <div>
+        <p class="text-primary pb-2 font-medium">Habit Name</p>
+        <input
+          class="w-full h-14 rounded-lg border border-gray-300 bg-white px-4 text-primary focus:ring-2 focus:ring-secondary"
+          placeholder="e.g. Read for 15 minutes"
+        />
+      </div>
+
+      <!-- Frequency -->
+      <div>
+        <p class="text-primary pb-2 font-medium">Frequency</p>
+        <div class="flex h-12 rounded-lg bg-white p-1">
+
+          <label class="flex-1 flex items-center justify-center rounded-lg cursor-pointer
+          text-primary font-medium text-sm has-[:checked]:bg-primary has-[:checked]:text-white has-[:checked]:shadow">
+            Daily
+            <input type="radio" name="frequency" class="hidden" checked />
+          </label>
+
+          <label class="flex-1 flex items-center justify-center rounded-lg cursor-pointer 
+          text-primary font-medium text-sm has-[:checked]:bg-primary has-[:checked]:text-white has-[:checked]:shadow">
+            Weekly
+            <input type="radio" name="frequency" class="hidden" />
+          </label>
+
+          <label class="flex-1 flex items-center justify-center rounded-lg cursor-pointer 
+          text-primary font-medium text-sm has-[:checked]:bg-primary has-[:checked]:text-white has-[:checked]:shadow">
+            Monthly
+            <input type="radio" name="frequency" class="hidden" />
+          </label>
+
+        </div>
+      </div>
+
+      <!-- Goal -->
+      <div class="flex items-center justify-between">
+        <div class="flex items-center gap-4">
+          <div class="size-10 bg-white rounded-lg flex items-center justify-center text-primary">
+            <span class="material-symbols-outlined">flag</span>
+          </div>
+          <div>
+            <p class="text-primary font-medium">Goal</p>
+            <p class="text-gray-500 text-sm">Times per day</p>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-2 text-primary">
+          <button class="size-8 bg-white rounded-full flex items-center justify-center">-</button>
+          <span class="w-6 text-center">1</span>
+          <button class="size-8 bg-white rounded-full flex items-center justify-center">+</button>
+        </div>
+      </div>
+
+      <!-- Reminders -->
+      <div class="flex items-center justify-between">
+        <div class="flex items-center gap-4">
+          <div class="size-10 bg-white rounded-lg flex items-center justify-center text-primary">
+            <span class="material-symbols-outlined">notifications</span>
+          </div>
+          <p class="text-primary font-medium">Reminders</p>
+        </div>
+
+        <label class="relative inline-flex items-center cursor-pointer">
+          <input type="checkbox" class="sr-only peer" checked />
+          <div class="w-12 h-7 bg-gray-200 rounded-full peer peer-checked:bg-secondary
+          after:absolute after:top-1 after:left-1 after:h-5 after:w-5 after:bg-white after:rounded-full after:transition-all
+          peer-checked:after:translate-x-5">
+          </div>
+        </label>
+      </div>
+
+      <!-- Reminder Time -->
+      <div class="flex items-center justify-between pl-14">
+        <p class="text-gray-500 text-base">Reminder Time</p>
+        <button class="bg-white px-4 py-2 rounded-lg text-base font-medium text-primary">08:00 AM</button>
+      </div>
+
+      <!-- Color Tag -->
+      <div>
+        <p class="text-primary font-medium pb-3">Select a Color Category</p>
+
+        <div class="flex items-center justify-between">
+
+          <label><input type="radio" name="color" class="hidden peer"><div class="size-9 bg-red-400 rounded-full peer-checked:ring-2 peer-checked:ring-primary ring-offset-2"></div></label>
+
+          <label><input type="radio" name="color" class="hidden peer" checked><div class="size-9 bg-blue-400 rounded-full peer-checked:ring-2 peer-checked:ring-primary ring-offset-2 flex items-center justify-center"><span class="material-symbols-outlined text-white opacity-0 peer-checked:opacity-100">check</span></div></label>
+
+          <label><input type="radio" name="color" class="hidden peer"><div class="size-9 bg-green-400 rounded-full peer-checked:ring-2 peer-checked:ring-primary ring-offset-2"></div></label>
+
+          <label><input type="radio" name="color" class="hidden peer"><div class="size-9 bg-yellow-400 rounded-full peer-checked:ring-2 peer-checked:ring-primary ring-offset-2"></div></label>
+
+          <label><input type="radio" name="color" class="hidden peer"><div class="size-9 bg-purple-400 rounded-full peer-checked:ring-2 peer-checked:ring-primary ring-offset-2"></div></label>
+
+          <label><input type="radio" name="color" class="hidden peer"><div class="size-9 bg-pink-400 rounded-full peer-checked:ring-2 peer-checked:ring-primary ring-offset-2"></div></label>
+
+        </div>
+      </div>
+
+      <button class="w-full h-14 rounded-xl bg-primary text-white font-semibold" onclick="showPopup('Habit created successfully!')">
+        Create Habit
+      </button>
+      <button class="w-full h-14 rounded-xl bg-accent border border-primary text-primary font-semibold" onclick="window.location.href='dashboard.html'">
+        Cancel
+      </button>
+
+    </div>
+
+    <!-- ⭐ FIXED CENTERED NAV -->
+    <div class="fixed bottom-0 left-0 right-0 bg-primary h-20 rounded-t-xl flex items-center justify-around shadow-lg z-10 max-w-[420px] mx-auto px-4">
+
+      <a href="dashboard.html" class="flex flex-col items-center text-accent/70">
+        <span class="material-symbols-outlined text-2xl">home</span>
+        <span class="text-xs font-medium">Home</span>
+      </a>
+
+      <a href="reflection.html" class="flex flex-col items-center text-accent/70">
+          <span class="material-symbols-outlined text-2xl">calendar_today</span>
+          <span class="text-xs font-medium">Journal</span>
+        </a>
+
+      <!-- ⭐ ACTIVE ADD -->
+      <a href="add-habit.html" class="relative -translate-y-4 flex size-16 items-center justify-center rounded-full bg-accent text-primary shadow-lg">
+        <span class="material-symbols-outlined text-4xl" style="font-variation-settings:'FILL' 1;">add</span>
+      </a>
+
+      <a href="settings.html" class="flex flex-col items-center text-accent/70">
+        <span class="material-symbols-outlined text-2xl">settings</span>
+        <span class="text-xs font-medium">Settings</span>
+      </a>
+
+      <a href="profile.html" class="flex flex-col items-center text-accent/70">
+        <span class="material-symbols-outlined text-2xl">person</span>
+        <span class="text-xs font-medium">Profile</span>
+      </a>
+
+    </div>
+
+  </div>
+</div>
+
+...
+</nav>   <!-- your bottom nav -->
+
+<!-- ⭐ PUT THE POPUP RIGHT HERE -->
+<div id="popup-success"
+     class="fixed inset-0 z-50 hidden flex items-center justify-center bg-black/30 backdrop-blur-sm">
+
+  <div class="mx-6 w-full max-w-sm rounded-3xl bg-white p-8 text-center shadow-[0_4px_20px_rgba(0,0,0,0.2)] flex flex-col items-center gap-4 animate-popup">
+
+    <div class="flex size-16 items-center justify-center rounded-full bg-[#FEF0AD]">
+      <span class="material-symbols-outlined text-4xl text-[#08304E]">check_circle</span>
+    </div>
+
+    <h3 class="text-2xl font-bold text-[#08304E]">Success!</h3>
+
+    <p id="popup-message" class="text-base text-[#08304E]/80">
+      Action completed successfully.
+    </p>
+
+    <button
+      onclick="hidePopup()"
+      class="mt-2 w-full rounded-full bg-[#08304E] py-3.5 text-base font-semibold text-[#FEF0AD] shadow-md hover:bg-[#08304E]/90 transition">
+      Continue
+    </button>
+
+  </div>
+</div>
+
+<style>
+  @keyframes popup-scale {
+    0% { transform: scale(0.85); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+  }
+  .animate-popup { animation: popup-scale 0.25s ease-out; }
+</style>
+
+<script>
+  function showPopup(message) {
+    document.getElementById("popup-message").textContent = message;
+    document.getElementById("popup-success").classList.remove("hidden");
+  }
+
+  function hidePopup() {
+    document.getElementById("popup-success").classList.add("hidden");
+  }
+</script>
+
+</body>
+</html>
+
+
+</body>
+</html>

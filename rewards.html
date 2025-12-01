@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Rewards & Achievements</title>
+
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+
+<style>
+  body { font-family: 'Poppins', sans-serif; }
+  .material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  }
+  body { min-height: max(884px, 100dvh); }
+</style>
+
+</head>
+
+<body class="bg-[#F8FAFC]">
+
+<!-- ⭐ MATCHED PHONE WIDTH -->
+<div class="relative mx-auto flex h-auto min-h-screen w-full max-w-[420px] flex-col pb-28">
+
+<div class="flex-1">
+
+<!-- Top App Bar -->
+<div class="flex items-center bg-[#F8FAFC] p-4 pb-2 justify-between sticky top-0 z-20">
+
+  <a href="dashboard.html" class="flex size-12 items-center justify-center text-primary">
+        <span class="material-symbols-outlined text-3xl">arrow_back_ios</span>
+    </a>
+  <h1 class="text-[#08304E] text-xl font-bold flex-1 text-center">Your Rewards</h1>
+
+<button class="flex size-12 items-center justify-center text-primary">
+        <span class="material-symbols-outlined text-2xl">notifications</span>
+    </button>
+</div>
+
+<!-- Stats -->
+<div class="flex flex-wrap gap-4 p-4">
+  <div class="flex flex-col flex-1 min-w-[158px] gap-1.5 rounded-xl p-4 bg-[#A8D5E2]/30">
+    <p class="text-[#08304E] text-sm font-medium">Total Badges</p>
+    <p class="text-[#08304E] text-3xl font-bold">12</p>
+  </div>
+
+  <div class="flex flex-col flex-1 min-w-[158px] gap-1.5 rounded-xl p-4 bg-[#A8D5E2]/30">
+    <p class="text-[#08304E] text-sm font-medium">Longest Streak</p>
+    <p class="text-[#08304E] text-3xl font-bold">28 days</p>
+  </div>
+</div>
+
+<!-- Recently Unlocked -->
+<h2 class="text-[#08304E] text-lg font-bold px-4 pb-2 pt-4">Recently Unlocked</h2>
+
+<div class="flex overflow-x-auto scrollbar-hide">
+  <div class="flex items-stretch px-4 pt-2 pb-4 gap-4">
+
+    <div class="flex flex-col gap-3 text-center min-w-24">
+      <div class="bg-[#FEF0AD] rounded-full aspect-square flex items-center justify-center text-[#08304E]">
+        <span class="material-symbols-outlined !text-5xl">calendar_today</span>
+      </div>
+      <p class="text-[#08304E] font-semibold">Perfect Week</p>
+      <p class="text-[#08304E]/60 text-sm">2 days ago</p>
+    </div>
+
+    <div class="flex flex-col gap-3 text-center min-w-24">
+      <div class="bg-[#FEF0AD] rounded-full aspect-square flex items-center justify-center text-[#08304E]">
+        <span class="material-symbols-outlined !text-5xl">rocket_launch</span>
+      </div>
+      <p class="text-[#08304E] font-semibold">Goal Smasher</p>
+      <p class="text-[#08304E]/60 text-sm">4 days ago</p>
+    </div>
+
+    <div class="flex flex-col gap-3 text-center min-w-24">
+      <div class="bg-[#FEF0AD] rounded-full aspect-square flex items-center justify-center text-[#08304E]">
+        <span class="material-symbols-outlined !text-5xl">wb_sunny</span>
+      </div>
+      <p class="text-[#08304E] font-semibold">Early Riser</p>
+      <p class="text-[#08304E]/60 text-sm">5 days ago</p>
+    </div>
+
+    <div class="flex flex-col gap-3 text-center min-w-24">
+      <div class="bg-[#FEF0AD] rounded-full aspect-square flex items-center justify-center text-[#08304E]">
+        <span class="material-symbols-outlined !text-5xl">auto_stories</span>
+      </div>
+      <p class="text-[#08304E] font-semibold">Bookworm</p>
+      <p class="text-[#08304E]/60 text-sm">Last week</p>
+    </div>
+
+  </div>
+</div>
+
+<!-- Tabs -->
+<div class="sticky top-[72px] bg-[#F8FAFC] z-10 pt-4">
+  <div class="flex border-b border-[#08304E]/10 px-4 justify-between">
+    <a class="flex flex-col items-center border-b-[3px] border-[#08304E] text-[#08304E] pb-[13px] pt-2 flex-1">
+      <p class="text-sm font-bold">Badges</p>
+    </a>
+    <a class="flex flex-col items-center border-b-[3px] border-transparent text-[#08304E]/50 pb-[13px] pt-2 flex-1">
+      <p class="text-sm font-bold">Trophies</p>
+    </a>
+    <a class="flex flex-col items-center border-b-[3px] border-transparent text-[#08304E]/50 pb-[13px] pt-2 flex-1">
+      <p class="text-sm font-bold">Milestones</p>
+    </a>
+  </div>
+</div>
+
+<!-- Grid -->
+<div class="grid grid-cols-3 gap-4 p-4">
+
+  <div class="flex flex-col items-center gap-2 text-center">
+    <div class="bg-[#FEF0AD] w-full aspect-square rounded-full flex items-center justify-center text-[#08304E]">
+      <span class="material-symbols-outlined !text-5xl">directions_run</span>
+    </div>
+    <p class="text-[#08304E] text-sm font-semibold">First 5k</p>
+    <p class="text-[#08304E]/60 text-xs">Sep 12</p>
+  </div>
+
+  <div class="flex flex-col items-center gap-2 text-center">
+    <div class="bg-[#FEF0AD] w-full aspect-square rounded-full flex items-center justify-center text-[#08304E]">
+      <span class="material-symbols-outlined !text-5xl">local_florist</span>
+    </div>
+    <p class="text-[#08304E] text-sm font-semibold">Mindful Minute</p>
+    <p class="text-[#08304E]/60 text-xs">Sep 10</p>
+  </div>
+
+  <div class="flex flex-col items-center gap-2 text-center">
+    <div class="bg-[#FEF0AD] w-full aspect-square rounded-full flex items-center justify-center text-[#08304E]">
+      <span class="material-symbols-outlined !text-5xl">water_drop</span>
+    </div>
+    <p class="text-[#08304E] text-sm font-semibold">Hydration Hero</p>
+    <p class="text-[#08304E]/60 text-xs">Sep 9</p>
+  </div>
+
+  <div class="flex flex-col gap-2 items-center text-center opacity-50">
+    <div class="bg-gray-300 w-full aspect-square rounded-full flex items-center justify-center text-gray-500 relative">
+      <span class="material-symbols-outlined !text-5xl">fitness_center</span>
+      <div class="absolute inset-0 bg-gray-300/60 rounded-full flex items-center justify-center">
+        <span class="material-symbols-outlined !text-3xl">lock</span>
+      </div>
+    </div>
+    <p class="text-[#08304E] text-sm font-semibold">Workout Warrior</p>
+    <p class="text-[#08304E]/60 text-xs">Log 10 workouts</p>
+  </div>
+
+  <div class="flex flex-col gap-2 items-center text-center opacity-50">
+    <div class="bg-gray-300 w-full aspect-square rounded-full flex items-center justify-center text-gray-500 relative">
+      <span class="material-symbols-outlined !text-5xl">nightlight</span>
+      <div class="absolute inset-0 bg-gray-300/60 rounded-full flex items-center justify-center">
+        <span class="material-symbols-outlined !text-3xl">lock</span>
+      </div>
+    </div>
+    <p class="text-[#08304E] text-sm font-semibold">Consistent Sleep</p>
+    <p class="text-[#08304E]/60 text-xs">7 days of 8h sleep</p>
+  </div>
+
+  <div class="flex flex-col gap-2 items-center text-center opacity-50">
+    <div class="bg-gray-300 w-full aspect-square rounded-full flex items-center justify-center text-gray-500 relative">
+      <span class="material-symbols-outlined !text-5xl">groups</span>
+      <div class="absolute inset-0 bg-gray-300/60 rounded-full flex items-center justify-center">
+        <span class="material-symbols-outlined !text-3xl">lock</span>
+      </div>
+    </div>
+    <p class="text-[#08304E] text-sm font-semibold">Team Player</p>
+    <p class="text-[#08304E]/60 text-xs">Join a challenge</p>
+  </div>
+
+</div>
+
+</div>
+
+<!-- ⭐ FIXED NAVBAR (same as dashboard) -->
+<nav class="fixed bottom-0 left-0 right-0 h-20 bg-[#08304E] shadow-lg rounded-t-xl px-4 
+            flex items-center justify-around z-30 max-w-[420px] mx-auto">
+
+  <a href="dashboard.html" class="flex flex-col items-center text-[#FEF0AD]/70">
+    <span class="material-symbols-outlined text-2xl">home</span>
+    <span class="text-xs">Home</span>
+  </a>
+
+  <a href="reflection.html" class="flex flex-col items-center text-[#FEF0AD]/70">
+    <span class="material-symbols-outlined text-2xl">calendar_today</span>
+    <span class="text-xs">Journal</span>
+  </a>
+
+  <a href="add-habit.html" class="relative -translate-y-4 flex items-center justify-center">
+    <div class="size-16 rounded-full bg-[#FEF0AD] text-[#08304E] shadow-lg flex items-center justify-center">
+      <span class="material-symbols-outlined text-4xl">add</span>
+    </div>
+  </a>
+
+  <a href="settings.html" class="flex flex-col items-center text-[#FEF0AD]/70">
+    <span class="material-symbols-outlined text-2xl">settings</span>
+    <span class="text-xs">Settings</span>
+  </a>
+
+  <a href="profile.html" class="flex flex-col items-center text-[#FEF0AD]/70">
+    <span class="material-symbols-outlined text-2xl">person</span>
+    <span class="text-xs">Profile</span>
+  </a>
+
+</nav>
+
+</div>
+</body>
+</html>
